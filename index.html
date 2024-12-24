@@ -1,201 +1,251 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Phuong Vu Ngoc Nguyen Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Phuong Vu Ngoc Nguyen Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body class="is-preload">
+        
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+            <!-- Intro -->
+            <div id="intro">
+                <h1>Phuong Nguyen Portfolio</h1>
+                <h2>Hi, I'm <span>Phuong Nguyen</span></h2>
+                <p>I'm looking for Data Engineer or Machine Learning position<br />
+                <span>Python, SQL, C++, Tableau</span><br />
+                <a href="https://www.linkedin.com/in/nphuong302/" target="_blank">@Phuong Nguyen</a></p>
+                <ul class="actions">
+                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                </ul>
+            </div>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Welcome to<br />
-						Phuong Nguyen Portfolio</h1>
-						<p>Hi, I'm looking for Data Analyst or Data Engineer position<br />
-						<span>SQL, Python, Tableau</span><br />
-						<a href="https://www.linkedin.com/in/nphuong302/" target="_blank">@Phuong Nguyen</a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo">Portfolio</a>
+            </header>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Portfolio</a>
-					</header>
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li class="active"><a href="index.html">About Me</a></li>
+                    <li><a href="elements.html">Projects</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.facebook.com/nphuong302" target="_blank" class="icon brands fab fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/nphuong302/" target="_blank" class="icon brands fab fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    <li><a href="https://github.com/nphuong302" target="_blank" class="icon brands fab fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="https://www.hackerrank.com/profile/nphuong302" target="_blank" class="icon brands fab fa-hackerrank"><span class="label">Hackerrank</span></a></li>
+                </ul>
+            </nav>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/nphuong302" target="_blank" class="icon brands fab fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.linkedin.com/in/nphuong302/" target="_blank" class="icon brands fab fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/nphuong302" target="_blank" class="icon brands fab fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://www.hackerrank.com/profile/nphuong302" target="_blank" class="icon brands fab fa-hackerrank"><span class="label">Hackerrank</span></a></li>
-						</ul>
-					</nav>
+            <div id="main">
+                <!-- About -->
+                <div id="about">
+                    <div class="container">
+                        <div class="row">
+                            <div class="about-col-1">
+                                <img src="images/photo.png">
+                                <a href="assets/pdf/Phuong_Nguyen_Resume.pdf" download="" class="home_button button large">Download CV</a>
+                            </div>
+                            <div class="about-col-2">
+                                <h1 class="sub-title">About Me</h1>
+                                <p>
+                                Hi, I'm transitioning from a career of a Software Engineer 
+                                and seeking for a full-time role in the field of Data Science 
+                                and Artificial Intelligence. <br>
+                                Currently, I'm focusing on studying to apply for a Master's degree in AI. <br>
+                                I am determined, creative, eager to learn and able to explore various domains.
+                                </p>
 
-				<!-- Main -->
-					<div id="main">
+                                <div class="tab-titles">
+                                    <p class="tab-links active-link" onclick="opentab('data')">
+                                        <i class="fa-regular fa-face-grin-beam"></i> <strong>Details</strong>
+                                    </p>
+                                    <p class="tab-links" onclick="opentab('skills')">
+                                        <i class="fa-solid fa-laptop-code"></i> <strong>Skills</strong>
+                                    </p>
+                                    <p class="tab-links" onclick="opentab('education')">
+                                        <i class="fa-solid fa-school-flag"></i> <strong>Education</strong>
+                                    </p>
+                                </div>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="https://github.com/nphuong302/Football_prediction" target="_blank">Football Prediction</a></h2>
-									<p><strong>Description: </strong>A football prediction project which estimates the score of the football match between 2 teams in the Southeast Asian Championship.<br />
-									Analysing the data of all football matches from 2018 to 2022 and predicting the result of the match between two teams in AFF Cup.<br />
-									<strong>Programming language: </strong> Python (pandas and numpy).</p>
-								</header>
-								<a href="https://github.com/nphuong302/Football_prediction" target="_blank" class="image fit"><img src="images/img_01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/nphuong302/Football_prediction" target="_blank" class="button large">View Project</a></li>
-								</ul>
-							</article>
+                                <div class="tab-contents active-tab" id="data">
+                                    <ul class="personal-info-list">
+                                        <li>
+                                            <span class="info-label">Date of Birth:</span> March 20th, 1997
+                                        </li>
+                                        <li>
+                                            <span class="info-label">Address:</span> Huynh Tan Phat Street, Ho Chi Minh City
+                                        </li>
+                                        <li>
+                                            <span class="info-label">Phone:</span> 0332008420
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tab-contents" id="skills">
+                                    <ul class="personal-info-list">
+                                        <li>
+                                            <span class="info-label">Programming Language:</span> Python, C++, SQL
+                                        </li>
+                                        <li>
+                                            <span class="info-label">Language:</span> English, Chinese
+                                        </li>
+                                        <li>
+                                            <span class="info-label">Collaboration:</span> Agile, Scrum
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-contents" id="education">
+                                    <ul class="personal-info-list">
+                                        <li>
+                                            <span class="info-label">Degree:</span> Bachelor of Engineering
+                                        </li>
+                                        <li>
+                                            <span class="info-label">Period:</span> Aug 2016 - Nov 2020
+                                        </li>
+                                        <li>
+                                            <span class="info-label">University:</span> Ho Chi Minh University of Technology
+                                        </li>
+                                        <li>
+                                            <span class="info-label">GPA:</span> 7.49/10
+                                        </li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/nphuong302/DataAnalystPortfolioProject" target="_blank">Covid-19 Data Exploration</a></h2>
-									</header>
-									<a href="https://github.com/nphuong302/DataAnalystPortfolioProject" target="_blank" class="image fit"><img src="images/img_02.jpg" alt="" /></a>
-									<p><strong>Description: </strong>Exploraion of Covid-19 Dataset in SQL Server.<br />
-									Performing some queries to investigate Covid-19 dataset, such as: calculating death percentage, infection percentage; 
-									finding out what country has the highest and lowest rate; vacination rate in each country or each continent.<br />
-									<strong>Programming language: </strong> SQL<br />
-									<strong>Visualization: </strong> Tableau</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/nphuong302/DataAnalystPortfolioProject" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
+                <!-- Experiences -->
+                <div id="experiences">
+                    <div class="container">
+                        <h1 class="sub-title">Work Experiences</h1>
+                        <div class="work-list">
+                            <div class="work">
+                                <img src="images/ta.png">
+                                <div class="layer">
+                                    <h3>Teaching Assistant</h3>
+                                    <p>Prepare homework and handouts, review the 
+                                    vocabularies and structures for the students, 
+                                    then help the teacher in class activities and write reports.</p>
+                                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="work">
+                                <img src="images/copywriter.png">
+                                <div class="layer">
+                                    <h3>Copy Writer</h3>
+                                    <p>Write articles for a fishing blog: 22 articles with over 60000 words. 
+                                    <br>Language: English.</br></p>
+                                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="work">
+                                <img src="images/dek.png">
+                                <div class="layer">
+                                    <h3>Software Engineer</h3>
+                                    <p>Test and troubleshoot for telecommunication 
+                                    application. Discuss and prepare documents for new features.
+                                    <br>Programming language: Erlang.</br></p>
+                                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="work">
+                                <img src="images/intern.png">
+                                <div class="layer">
+                                    <h3>Intern</h3>
+                                    <p>Connect inverters to PLCs. Use Modbus RTU communication.
+                                    <br>Programming language: PLC.</br></p>
+                                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn button large">See More</a>
+                    </div>
+                </div>
 
-								<article>
-									<header>
-										<h2><a href="https://github.com/nphuong302/Flask_Web" target="_blank">Web Application, Database with Flask</a></h2>
-									</header>
-									<a href="https://github.com/nphuong302/Flask_Web" target="_blank" class="image fit"><img src="images/img_04.jpg" alt="" /></a>
-									<p><strong>Description:</strong> Making a website with Flask including: creating a new user’s account, storing the information in the database, 
-									authenticating user account, logging into – logging out of the account and storing notes of each user.<br />
-									<strong>Programming language: </strong> Python</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/nphuong302/Flask_Web" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
+            </div>
 
-								<article>
-									<header>
-										<h2><a href="https://github.com/nphuong302/webscraping_beautifulsoup" target="_blank">Web Scraping with BeautifulSoup</a></h2>
-									</header>
-									<a href="https://github.com/nphuong302/webscraping_beautifulsoup" target="_blank" class="image fit"><img src="images/img_03.jpg" alt="" /></a>
-									<p><strong>Description: </strong>Performing web scraping using Beautifulsoup, collecting and filtering data in a Jobs Search Website and a Clothing Stores.<br />
-									<strong>Programming language: </strong> Python</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/nphuong302/webscraping_beautifulsoup" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<h2><a href="https://github.com/nphuong302/PythonOOP_CardsGame" target="_blank">Cards Game With Python</a></h2>
-									</header>
-									<a href="https://github.com/nphuong302/PythonOOP_CardsGame" target="_blank" class="image fit"><img src="images/img_05.jpg" alt="" /></a>
-									<p><strong>Description: </strong> Creating Cards Game called "War" with Python.<br />
-									<strong>Programming language: </strong> Python </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/nphuong302/PythonOOP_CardsGame" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
-								
-								<article>
-									<header>
-										<h2><a href="https://github.com/nphuong302/Pandas_project" target="_blank">Pandas Project</a></h2>
-									</header>
-									<a href="https://github.com/nphuong302/Pandas_project" target="_blank" class="image fit"><img src="images/img_06.jpg" alt="" /></a>
-									<p><strong>Description: </strong> Practicing Python Pandas with Ecommerce Purchases and Movie Dataset.<br />
-									<strong>Programming language: </strong> Python</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/nphuong302/Pandas_project" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Le Hong Phong, Vung Tau City</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(+84) 332008420</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">nvnp203@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.facebook.com/nphuong302" target="_blank" class="icon brands fab fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.linkedin.com/in/nphuong302/" target="_blank" class="icon brands fab fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://github.com/nphuong302" target="_blank" class="icon brands fab fa-github"><span class="label">Github</span></a></li>
-									<li><a href="https://www.hackerrank.com/profile/nphuong302" target="_blank" class="icon brands fab fa-hackerrank"><span class="label">Hackerrank</span></a></li>
-								</ul>								  
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
+            <!-- Footer -->
+                <footer id="footer">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="fields">
+                                <div class="field">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" /></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section class="split contact">
+                        <section class="alt">
+                            <h3>Address</h3>
+                            <p>Le Hong Phong, Vung Tau City</p>
+                        </section>
+                        <section>
+                            <h3>Phone</h3>
+                            <p><a href="#">(+84) 332008420</a></p>
+                        </section>
+                        <section>
+                            <h3>Email</h3>
+                            <p><a href="#">nvnp203@gmail.com</a></p>
+                        </section>
+                        <section>
+                            <h3>Social</h3>
+                            <ul class="icons alt">
+                                <li><a href="https://www.facebook.com/nphuong302" target="_blank" class="icon brands fab fa-facebook"><span class="label">Facebook</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/nphuong302/" target="_blank" class="icon brands fab fa-linkedin"><span class="label">Linkedin</span></a></li>
+                                <li><a href="https://github.com/nphuong302" target="_blank" class="icon brands fab fa-github"><span class="label">Github</span></a></li>
+                                <li><a href="https://www.hackerrank.com/profile/nphuong302" target="_blank" class="icon brands fab fa-hackerrank"><span class="label">Hackerrank</span></a></li>
+                            </ul>								  
+                        </section>
+                    </section>
+                </footer>
+            
+        </div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        
+		<script>
+			var tablinks = document.getElementsByClassName("tab-links");
+			var tabcontents = document.getElementsByClassName("tab-contents");
+			function opentab(tabname){
+				for (tablink of tablinks){
+					tablink.classList.remove("active-link");
+				}
+				for (tabcontent of tabcontents){
+					tabcontent.classList.remove("active-tab");
+				}
+				event.currentTarget.classList.add("active-link");
+				document.getElementById(tabname).classList.add("active-tab");
+			}
 
-	</body>
+		</script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
