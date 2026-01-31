@@ -740,53 +740,6 @@ footer {
 	box-shadow: 0 10px 25px rgba(167, 192, 128, 0.3);
 }
 
-.contact-info {
-	display: grid;
-	gap: 2rem;
-}
-
-.contact-item {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	padding: 1.5rem;
-	background: var(--bg1);
-	border-radius: 15px;
-	border: 1px solid var(--bg3);
-	transition: all 0.3s ease;
-}
-
-.contact-item:hover {
-	border-color: var(--primary);
-	transform: translateX(5px);
-}
-
-.contact-item i {
-	color: var(--primary);
-	font-size: 1.5rem;
-	width: 40px;
-	text-align: center;
-}
-
-.contact-item div h4 {
-	color: var(--fg);
-	margin-bottom: 0.5rem;
-}
-
-.contact-item div p {
-	color: var(--grey1);
-}
-
-.contact-item a {
-	color: var(--grey1);
-	text-decoration: none;
-	transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-	color: var(--primary);
-}
-
 .footer-bottom {
 	text-align: center;
 	margin-top: 3rem;
@@ -876,3 +829,79 @@ footer {
 	scrollbar-color: var(--primary) var(--bg1);
 }
 /* </style> */
+
+/* =======================
+	Contact
+======================= */
+
+.contact {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--bg0), var(--bg1));
+    border-top: 1px solid var(--bg2);
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--fg);
+    letter-spacing: 0.5px;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    color: var(--grey1);
+    max-width: 520px;
+    margin: 0.5rem auto 0;
+}
+
+/* Cards */
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.contact-card {
+    background: var(--bg1);
+    border: 1px solid var(--bg3);
+    border-radius: 16px;
+    padding: 1.6rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.contact-card.muted {
+    cursor: default;
+}
+
+/* Text */
+.contact-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--grey1);
+    margin-bottom: 0.6rem;
+}
+
+.contact-value {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--fg);
+}
+
+/* Signature */
+.contact-signature {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--grey1);
+    font-style: italic;
+}
