@@ -156,14 +156,23 @@ nav {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 55vh;         
     display: flex;
-    align-items: center;
+    align-items: flex-start;   
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--bg0) 0%, var(--bg1) 50%, var(--bg2) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--bg0) 0%,
+        var(--bg1) 50%,
+        var(--bg2) 100%
+    );
     position: relative;
     overflow: hidden;
+
+    /* CHỈ chỉnh 2 dòng này */
+    padding-top: 7rem;
+    padding-bottom: 2rem;
 }
 
 .hero::before {
@@ -252,7 +261,14 @@ main {
 /* Project Filters */
 .project-filters {
     text-align: center;
-    margin: 4rem 0;
+    margin-top: 5rem;   /* ⬅️ tạo khoảng thở với hero */
+    margin-bottom: 3rem;
+}
+
+.project-filters h2 {
+    font-size: 2.2rem;  /* trước ~2rem */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
 .filters-container {
