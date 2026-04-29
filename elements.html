@@ -23,10 +23,11 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="social-links">
-            <a href="https://github.com/nphuong302" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/nphuong302/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.hackerrank.com/profile/nphuong302" target="_blank"><i class="fab fa-hackerrank"></i></a>
-            <a href="https://codolio.com/profile/nphuong302" target="_blank"><i class="fa-solid fa-square-poll-vertical"></i></a>
+            <a href="https://github.com/nphuong302" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nphuong302/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://hashnode.com/@nphuong302" target="_blank" title="Hashnode Blog"><i class="fa-brands fa-hashnode"></i></a>
+            <a href="https://www.hackerrank.com/profile/nphuong302" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
+            <a href="https://codolio.com/profile/nphuong302" target="_blank" title="Codolio"><i class="fa-solid fa-square-poll-vertical"></i></a>
         </div>
     </nav>
 </header>
@@ -65,9 +66,11 @@
     <div class="filters-container">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="ml">Machine Learning</button>
-        <button class="filter-btn" data-filter="data">Data Analysis</button>
-        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
         <button class="filter-btn" data-filter="ai">AI Systems</button>
+        <button class="filter-btn" data-filter="data">Data Analysis</button>
+        <button class="filter-btn" data-filter="sql">SQL</button>
+        <button class="filter-btn" data-filter="python">Python</button>
     </div>
 </section>
 
@@ -106,6 +109,41 @@
             <a href="https://github.com/nphuong302/rag-chatbot" target="_blank" class="project-btn btn-primary">
                 <i class="fab fa-github"></i> View Code
             </a>
+        </div>
+    </div>
+</article>
+
+<!-- ===== Thesis: Fruit Classification ===== -->
+<article id="thesis-fruit" class="project-card" data-category="ml python cv">
+    <div class="project-image">
+        <img src="images/img_03.jpg" alt="Fruit ripeness classification stages: Unripe, Breaker, Turning, Ripe" />
+    </div>
+
+    <div class="project-content">
+        <h3 class="project-title">
+            <i class="fas fa-seedling"></i>
+            Fruit Classification
+        </h3>
+
+        <p class="project-description">
+            Final year thesis (2020): built a YOLOv4-based computer vision pipeline
+            to classify fruits by ripeness (green vs. ripe) using color analysis.
+            Designed for agricultural sorting simulation. Implemented with Python,
+            OpenCV, and deep learning training from scratch on a custom dataset.
+        </p>
+
+        <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">YOLOv4</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Deep Learning</span>
+            <span class="tech-tag">Computer Vision</span>
+        </div>
+
+        <div class="project-links">
+            <span class="project-btn btn-secondary" style="cursor: default; opacity: 0.75; justify-content: center;">
+                <i class="fas fa-graduation-cap"></i> Thesis Project — repository not yet public
+            </span>
         </div>
     </div>
 </article>
@@ -175,7 +213,7 @@
 </article>
 
 <!-- ===== COVID ===== -->
-<article id="covid" class="project-card" data-category="data sql">
+<article id="covid" class="project-card" data-category="data sql python">
     <div class="project-image">
         <img src="images/img_02.jpg" alt="COVID Analysis" />
     </div>
@@ -281,7 +319,7 @@
 <section id="contact" class="contact">
   <div class="container">
     <div class="section-header">
-      <h1 class="section-title">Let’s Connect 🌿</h1>
+      <h2 class="section-title">Let’s Connect</h2>
       <p class="section-subtitle">
         Open to thoughtful conversations, collaborations, and meaningful work.
       </p>

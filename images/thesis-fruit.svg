@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <!-- Fruit fill gradients -->
+    <radialGradient id="g-unripe" cx="38%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#9ad450"/>
+      <stop offset="65%"  stop-color="#4e9620"/>
+      <stop offset="100%" stop-color="#2a5c0a"/>
+    </radialGradient>
+    <radialGradient id="g-breaker" cx="38%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#f4ee70"/>
+      <stop offset="65%"  stop-color="#ccc020"/>
+      <stop offset="100%" stop-color="#8c8000"/>
+    </radialGradient>
+    <radialGradient id="g-turning" cx="38%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#f8c060"/>
+      <stop offset="55%"  stop-color="#e07828"/>
+      <stop offset="100%" stop-color="#903010"/>
+    </radialGradient>
+    <radialGradient id="g-ripe" cx="38%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#f07070"/>
+      <stop offset="60%"  stop-color="#b81828"/>
+      <stop offset="100%" stop-color="#680010"/>
+    </radialGradient>
+
+    <!-- Shared shine highlight applied over each fruit -->
+    <radialGradient id="shine" cx="32%" cy="24%" r="42%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#343f44"/>
+      <stop offset="100%" stop-color="#2d353b"/>
+    </linearGradient>
+
+    <!-- Accent top bar gradient -->
+    <linearGradient id="topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#a7c080"/>
+      <stop offset="50%"  stop-color="#83c092"/>
+      <stop offset="100%" stop-color="#dbbc7f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="url(#bg)" rx="0"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="5" fill="url(#topbar)"/>
+
+  <!-- Title -->
+  <text x="600" y="52"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="26" font-weight="700" letter-spacing="0.5"
+        fill="#a7c080">
+    Fruit Ripeness Classification
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="80"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="14" font-weight="400" letter-spacing="1.5"
+        fill="#859289">
+    YOLOv4  ·  Color Analysis  ·  Computer Vision
+  </text>
+
+  <!-- Divider line -->
+  <line x1="80" y1="98" x2="1120" y2="98" stroke="#475258" stroke-width="1"/>
+
+  <!-- ═══ STAGE 1 — UNRIPE ═══ -->
+  <!-- Number badge -->
+  <circle cx="175" cy="128" r="18" fill="#475258"/>
+  <text x="175" y="134"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="18" font-weight="800" fill="#d3c6aa">1</text>
+
+  <!-- Apple body -->
+  <circle cx="175" cy="268" r="112" fill="url(#g-unripe)"/>
+  <!-- Shine -->
+  <ellipse cx="148" cy="228" rx="52" ry="44" fill="url(#shine)"/>
+  <!-- Stem -->
+  <path d="M178 154 Q195 130 210 118" stroke="#4a6a28" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Leaf -->
+  <path d="M210 118 Q232 108 228 128 Q210 124 210 118 Z" fill="#5a8030" opacity="0.85"/>
+
+  <!-- Label -->
+  <rect x="100" y="398" width="150" height="42" rx="8" fill="#3d484d" stroke="#a7c080" stroke-width="1.5"/>
+  <text x="175" y="424"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="20" font-weight="700" fill="#d3c6aa">Unripe</text>
+
+  <!-- ═══ STAGE 2 — BREAKER ═══ -->
+  <circle cx="475" cy="128" r="18" fill="#475258"/>
+  <text x="475" y="134"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="18" font-weight="800" fill="#d3c6aa">2</text>
+
+  <circle cx="475" cy="268" r="112" fill="url(#g-breaker)"/>
+  <ellipse cx="448" cy="228" rx="52" ry="44" fill="url(#shine)"/>
+  <path d="M478 154 Q495 130 510 118" stroke="#6a7020" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M510 118 Q532 108 528 128 Q510 124 510 118 Z" fill="#7a8030" opacity="0.85"/>
+
+  <rect x="400" y="398" width="150" height="42" rx="8" fill="#3d484d" stroke="#dbbc7f" stroke-width="1.5"/>
+  <text x="475" y="424"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="20" font-weight="700" fill="#d3c6aa">Breaker</text>
+
+  <!-- ═══ STAGE 3 — TURNING ═══ -->
+  <circle cx="725" cy="128" r="18" fill="#475258"/>
+  <text x="725" y="134"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="18" font-weight="800" fill="#d3c6aa">3</text>
+
+  <circle cx="725" cy="268" r="112" fill="url(#g-turning)"/>
+  <ellipse cx="698" cy="228" rx="52" ry="44" fill="url(#shine)"/>
+  <path d="M728 154 Q745 130 760 118" stroke="#704020" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M760 118 Q782 108 778 128 Q760 124 760 118 Z" fill="#805030" opacity="0.85"/>
+
+  <rect x="650" y="398" width="150" height="42" rx="8" fill="#3d484d" stroke="#e69875" stroke-width="1.5"/>
+  <text x="725" y="424"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="20" font-weight="700" fill="#d3c6aa">Turning</text>
+
+  <!-- ═══ STAGE 4 — RIPE ═══ -->
+  <circle cx="1025" cy="128" r="18" fill="#475258"/>
+  <text x="1025" y="134"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="18" font-weight="800" fill="#d3c6aa">4</text>
+
+  <circle cx="1025" cy="268" r="112" fill="url(#g-ripe)"/>
+  <ellipse cx="998" cy="228" rx="52" ry="44" fill="url(#shine)"/>
+  <path d="M1028 154 Q1045 130 1060 118" stroke="#501010" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M1060 118 Q1082 108 1078 128 Q1060 124 1060 118 Z" fill="#602020" opacity="0.85"/>
+
+  <rect x="950" y="398" width="150" height="42" rx="8" fill="#3d484d" stroke="#e67e80" stroke-width="1.5"/>
+  <text x="1025" y="424"
+        text-anchor="middle"
+        font-family="'SF Pro Display', -apple-system, sans-serif"
+        font-size="20" font-weight="700" fill="#d3c6aa">Ripe</text>
+
+  <!-- Vertical dividers between stages -->
+  <line x1="325" y1="110" x2="325" y2="456" stroke="#475258" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="600" y1="110" x2="600" y2="456" stroke="#475258" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="875" y1="110" x2="875" y2="456" stroke="#475258" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Bottom border -->
+  <rect x="0" y="495" width="1200" height="5" fill="url(#topbar)"/>
+</svg>
