@@ -10,7 +10,7 @@
       "Kaggle competition on few-shot rule induction across 6 reasoning problem types (bit manipulation, physics gravity, unit conversion, numeral systems, symbol transform, encryption ciphers). Approach: a solver-distilled curriculum of verified teacher examples used to fine-tune NVIDIA's Nemotron-3-Nano with LoRA. The physics-gravity generator was not observed in the public competitor notebooks reviewed.",
       "Built deterministic per-type solvers and generated 21,311 curated training records across 5 of the 6 problem types. Round-trip re-verification caught errors in the synthetic generators. A rank-32 LoRA training pipeline was implemented for the 30B model, targeting Kaggle's vLLM inference backend."
     ],
-    "techStack": ["Python", "PyTorch", "PEFT", "TRL", "vLLM", "HuggingFace", "LoRA"],
+    "techStack": ["Python", "PyTorch", "TRL", "vLLM", "HuggingFace", "LoRA"],
     "image": "/images/nemotron.png",
     "imageAlt": "NVIDIA Nemotron Reasoning Challenge — solver-distilled curriculum feeding a LoRA adapter",
     "finalScore": "0.588",
@@ -18,25 +18,6 @@
     "links": [
       { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/nemotron-challenge", "style": "primary" },
       { "label": "Competition", "icon": "fab fa-kaggle", "url": "https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge", "style": "secondary" }
-    ]
-  },
-  {
-    "id": "cloud-intel-agent",
-    "title": "Cloud Market Intelligence Agent",
-    "icon": "fas fa-cloud",
-    "featured": false,
-    "category": ["ai", "python", "ml"],
-    "shortDesc": "Freelance project. B2B AI agent generating scheduled competitive-intelligence digests via Claude API, with Telegram delivery and GitHub audit trail.",
-    "description": [
-      "Freelance project. AI agent for B2B competitive intelligence in the cloud-services market: generates scheduled weekly digests and monthly strategic summaries from competitor pricing, news feeds, and market signals, with Telegram delivery and a GitHub audit trail.",
-      "Pipeline: Scheduler (cron, ICT-aware) → Workspace Loader → Claude API (analysis) → Quality Gates (TL;DR check · length bounds · source citations) → Telegram (delivery) + GitHub commit (audit trail).",
-      "Architecture: 3-layer design — Claude API analysis logic / Python agent runtime (scheduler + bot + HTTP server with daemon-thread pattern) / Docker-based deployment targeting managed-agent platforms. Reproducible Docker builds with lock-file CI."
-    ],
-    "techStack": ["Python", "Claude API", "Docker", "FastAPI", "Telegram Bot", "GitHub Actions"],
-    "image": "/images/cloud-agent.svg",
-    "imageAlt": "Cloud Market Intelligence Agent — scheduled pipeline from cron to Telegram delivery",
-    "links": [
-      { "label": "Freelance — repository private", "icon": "fas fa-lock", "url": null, "style": "muted" }
     ]
   },
   {
@@ -54,6 +35,23 @@
     "imageAlt": "RAG HR Assistant",
     "links": [
       { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/rag-chatbot", "style": "primary" }
+    ]
+  },
+  {
+    "id": "cloud-intel-agent",
+    "title": "Cloud Market Intelligence Agent",
+    "icon": "fas fa-cloud",
+    "featured": false,
+    "category": ["ai", "python", "ml"],
+    "shortDesc": "Freelance project. B2B AI agent generating scheduled competitive-intelligence digests via Claude API, with Telegram delivery and GitHub audit trail.",
+    "description": [
+      "Freelance project. B2B AI agent generating scheduled weekly and monthly competitive-intelligence digests for the cloud-services market. Pipeline: cron scheduler → Claude API analysis → quality gates (TL;DR, length, citations) → Telegram delivery + GitHub audit trail. 3-layer architecture: analysis logic / Python runtime (scheduler + bot + HTTP daemon) / Docker deployment."
+    ],
+    "techStack": ["Python", "Claude API", "Docker", "FastAPI", "Telegram Bot", "GitHub Actions"],
+    "image": "/images/cloud-agent.svg",
+    "imageAlt": "Cloud Market Intelligence Agent — scheduled pipeline from cron to Telegram delivery",
+    "links": [
+      { "label": "Freelance — repository private", "icon": "fas fa-lock", "url": null, "style": "muted" }
     ]
   },
   {
