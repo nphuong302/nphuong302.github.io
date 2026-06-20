@@ -1,0 +1,105 @@
+---
+---
+
+<section id="about" class="py-24 bg-rose-bg0">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-16" data-aos="fade-down">
+      <h2 class="text-4xl font-bold text-rose-fg mb-3">About Me</h2>
+      <p class="text-rose-muted text-lg">From Algorithms to Impact</p>
+    </div>
+
+    <div class="grid md:grid-cols-[300px_1fr] gap-12 items-start">
+
+      <!-- Image -->
+      <div class="flex flex-col items-center gap-4" data-aos="fade-right">
+        <div class="w-64 h-64 rounded-2xl overflow-hidden border-4 border-rose-bg3 shadow-lg">
+          <img src="/images/image.jpg" alt="Phuong Nguyen Profile Photo" class="w-full h-full object-cover" />
+        </div>
+        <a
+          href="/assets/pdf/PhuongNguyen_Resume.pdf"
+          download
+          class="inline-flex items-center gap-2 bg-rose-bg1 border border-rose-bg3 text-rose-secondary px-5 py-2.5 rounded-full text-sm font-medium hover:bg-rose-bg3 hover:-translate-y-0.5 transition-all duration-200"
+        >
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+
+      <!-- Info -->
+      <div data-aos="fade-left">
+        <p class="text-rose-fg leading-relaxed mb-4">
+          Machine Learning Developer with a background in software engineering and control & automation.
+          Focused on researching meaningful production models in Computer Vision and AI systems.
+        </p>
+        <p class="text-rose-fg leading-relaxed mb-8">
+          Passionate about continuous skill improvement through hands-on model building, deployment, and data-driven engineering practices.
+        </p>
+
+        <!-- Tabs -->
+        <div class="about-tabs">
+          <div class="flex gap-2 mb-6 border-b border-rose-bg3">
+            <button class="tab-btn active px-4 py-2 text-sm font-medium rounded-t-lg border-b-2 border-rose-primary text-rose-primary" data-tab="details">
+              <i class="fas fa-info-circle mr-1"></i> Details
+            </button>
+            <button class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg border-b-2 border-transparent text-rose-muted hover:text-rose-primary transition-colors" data-tab="experience">
+              <i class="fas fa-briefcase mr-1"></i> Experience
+            </button>
+            <button class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg border-b-2 border-transparent text-rose-muted hover:text-rose-primary transition-colors" data-tab="education">
+              <i class="fas fa-graduation-cap mr-1"></i> Education
+            </button>
+          </div>
+
+          <div id="tab-details" class="tab-panel space-y-3 text-sm">
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">Location:</span> Ho Chi Minh City, Vietnam</div>
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">Focus:</span> Machine Learning & AI</div>
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">Languages:</span> Vietnamese, English, Chinese, Italian</div>
+          </div>
+
+          <div id="tab-experience" class="tab-panel hidden space-y-4 text-sm">
+            <div>
+              <div class="font-semibold text-rose-fg">Machine Learning Developer</div>
+              <div class="text-rose-primary">Angle AI · Oct 2025 – May 2026</div>
+              <div class="text-rose-muted">ML research, model development, training, and on-device deployment</div>
+            </div>
+            <div>
+              <div class="font-semibold text-rose-fg">Software Engineer</div>
+              <div class="text-rose-primary">DEK Technologies · Jan 2021 – May 2022</div>
+              <div class="text-rose-muted">Telecom systems testing and Erlang development</div>
+            </div>
+            <div>
+              <div class="font-semibold text-rose-fg">Automation Engineering Intern</div>
+              <div class="text-rose-primary">Ben Thanh Automation · Jun – Aug 2019</div>
+              <div class="text-rose-muted">PLC programming and Modbus RTU integration</div>
+            </div>
+          </div>
+
+          <div id="tab-education" class="tab-panel hidden space-y-3 text-sm">
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">Degree:</span> Bachelor of Engineering</div>
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">Major:</span> Control Engineering & Automation</div>
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">University:</span> Ho Chi Minh University of Technology</div>
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">Period:</span> 2016 – 2020</div>
+            <div><span class="text-rose-secondary font-semibold w-24 inline-block">GPA:</span> 7.49 / 10</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active', 'border-rose-primary', 'text-rose-primary');
+        b.classList.add('border-transparent', 'text-rose-muted');
+      });
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+
+      btn.classList.add('active', 'border-rose-primary', 'text-rose-primary');
+      btn.classList.remove('border-transparent', 'text-rose-muted');
+      const target = (btn as HTMLElement).dataset.tab;
+      document.getElementById(`tab-${target}`)?.classList.remove('hidden');
+    });
+  });
+</script>

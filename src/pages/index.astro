@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Certifications from '../components/Certifications.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+import BlogSection from '../components/BlogSection.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Phuong Nguyen — Machine Learning & AI Portfolio">
+  <Header activePage="home" />
+  <Hero variant="home" />
+  <About />
+  <Skills />
+  <Certifications />
+  <ProjectsSection />
+  <BlogSection />
+  <Contact />
+  <Footer />
+</BaseLayout>

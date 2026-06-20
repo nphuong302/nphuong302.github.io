@@ -1,0 +1,8 @@
+[
+  { "icon": "fas fa-graduation-cap", "name": "Machine Learning Specialization", "issuer": "Coursera · DeepLearning.AI" },
+  { "icon": "fas fa-brain",          "name": "+3 Courses on LLMs",              "issuer": "DeepLearning.AI" },
+  { "icon": "fas fa-chart-bar",      "name": "Google Data Analytics Professional Certificate", "issuer": "Coursera · Google" },
+  { "icon": "fas fa-robot",          "name": "GenAI Intensive Course",           "issuer": "Kaggle" },
+  { "icon": "fas fa-database",       "name": "SQL Advanced",                     "issuer": "HackerRank" },
+  { "icon": "fas fa-language",       "name": "IELTS 7.0 · TOEIC 840",           "issuer": "IDP Vietnam · IIG Vietnam" }
+]

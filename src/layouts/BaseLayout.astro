@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Machine Learning Developer with software engineering background. Experience in ML, Computer Vision, RAG, and data analysis.",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content="Machine Learning Engineer, AI, Computer Vision, RAG, Python, SQL, Portfolio" />
+  <title>{title}</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+
+  <!-- FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+
+<body class="bg-rose-bg0 text-rose-fg font-sans min-h-screen">
+  <slot />
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // @ts-ignore
+      AOS.init({ duration: 700, once: true, offset: 80 });
+    });
+  </script>
+</body>
+</html>

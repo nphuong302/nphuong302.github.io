@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import projects from '../data/projects.json';
+
+const filters = [
+  { key: 'all', label: 'All' },
+  { key: 'ml',   label: 'Machine Learning' },
+  { key: 'ai',   label: 'AI Systems' },
+  { key: 'cv',   label: 'Computer Vision' },
+  { key: 'data', label: 'Data Analysis' },
+  { key: 'python', label: 'Python' },
+  { key: 'sql',  label: 'SQL' },
+];
+---
+
+<BaseLayout
+  title="Projects — Phuong Nguyen Portfolio"
+  description="Machine Learning and Data Science projects by Phuong Nguyen."
+>
+  <Header activePage="projects" />
+  <Hero variant="projects" />
+
+  <main id="projects" class="py-16 bg-rose-bg0">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <!-- Filters -->
+      <section class="mb-10" data-aos="fade-down">
+        <h2 class="text-center text-rose-muted text-sm uppercase tracking-widest mb-5 font-semibold">Filter by Technology</h2>
+        <div class="flex flex-wrap justify-center gap-2" id="filter-bar">
+          {filters.map(f => (
+            <button
+              class:list={[
+                "filter-btn px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200",
+                f.key === 'all'
+                  ? "bg-rose-primary text-white border-rose-primary"
+                  : "bg-rose-bg2 text-rose-muted border-rose-bg3 hover:border-rose-primary hover:text-rose-primary"
+              ]}
+              data-filter={f.key}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <!-- Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+        {projects.map((project, i) => (
+          <ProjectCard {...project} delay={i * 60} />
+        ))}
+      </div>
+
+    </div>
+  </main>
+
+  <Contact />
+  <Footer />
+</BaseLayout>
+
+<script>
+  const btns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.project-card');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => {
+        b.classList.remove('bg-rose-primary', 'text-white', 'border-rose-primary');
+        b.classList.add('bg-rose-bg2', 'text-rose-muted', 'border-rose-bg3');
+      });
+      btn.classList.add('bg-rose-primary', 'text-white', 'border-rose-primary');
+      btn.classList.remove('bg-rose-bg2', 'text-rose-muted', 'border-rose-bg3');
+
+      const filter = btn.dataset.filter ?? 'all';
+      cards.forEach(card => {
+        const cats = card.dataset.category ?? '';
+        card.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
+      });
+    });
+  });
+</script>

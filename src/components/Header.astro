@@ -1,0 +1,33 @@
+---
+interface Props {
+  activePage?: 'home' | 'projects';
+}
+const { activePage = 'home' } = Astro.props;
+const base = activePage === 'projects' ? '/' : '';
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-rose-bg0/90 backdrop-blur-md border-b border-rose-bg3/50 shadow-sm">
+  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <a href="/" class="text-rose-secondary font-bold text-lg hover:text-rose-highlight transition-colors">
+      🌿 Phuong Nguyen
+    </a>
+
+    <ul class="hidden md:flex gap-8 list-none m-0 p-0">
+      <li><a href={`${base}#about`}        class="text-rose-muted hover:text-rose-primary transition-colors text-sm font-medium">About</a></li>
+      <li><a href={`${base}#skills`}       class="text-rose-muted hover:text-rose-primary transition-colors text-sm font-medium">Skills</a></li>
+      <li><a href={`${base}#certifications`} class="text-rose-muted hover:text-rose-primary transition-colors text-sm font-medium">Certifications</a></li>
+      <li><a href="/projects"              class="text-rose-muted hover:text-rose-primary transition-colors text-sm font-medium">Projects</a></li>
+      <li><a href={`${base}#writing`}      class="text-rose-muted hover:text-rose-primary transition-colors text-sm font-medium">Writing</a></li>
+      <li><a href={`${base}#contact`}      class="text-rose-muted hover:text-rose-primary transition-colors text-sm font-medium">Contact</a></li>
+    </ul>
+
+    <div class="flex gap-4 items-center">
+      <a href="https://github.com/nphuong302"             target="_blank" title="GitHub"    class="text-rose-muted hover:text-rose-primary transition-colors text-lg"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/nphuong302/"   target="_blank" title="LinkedIn"  class="text-rose-muted hover:text-rose-primary transition-colors text-lg"><i class="fab fa-linkedin"></i></a>
+      <a href="https://hashnode.com/@nphuong302"          target="_blank" title="Hashnode"  class="text-rose-muted hover:text-rose-primary transition-colors text-lg"><i class="fa-brands fa-hashnode"></i></a>
+      <a href="https://www.hackerrank.com/profile/nphuong302" target="_blank" title="HackerRank" class="text-rose-muted hover:text-rose-primary transition-colors text-lg"><i class="fab fa-hackerrank"></i></a>
+    </div>
+
+  </nav>
+</header>

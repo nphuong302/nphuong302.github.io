@@ -1,0 +1,108 @@
+---
+interface Link {
+  label: string;
+  icon: string;
+  url: string | null;
+  style: 'primary' | 'secondary' | 'muted';
+}
+
+interface Props {
+  id: string;
+  title: string;
+  icon: string;
+  featured: boolean;
+  category: string[];
+  shortDesc: string;
+  description: string[];
+  techStack: string[];
+  image: string;
+  imageAlt: string;
+  finalScore?: string;
+  rank?: string;
+  links: Link[];
+  delay?: number;
+}
+
+const {
+  id, title, icon, featured, category,
+  shortDesc: _shortDesc, description, techStack,
+  image, imageAlt, finalScore, rank, links, delay = 0,
+} = Astro.props;
+---
+
+<article
+  id={id}
+  class:list={[
+    "project-card bg-rose-bg2 border border-rose-bg3 rounded-2xl overflow-hidden hover:-translate-y-1.5 hover:shadow-xl hover:border-rose-primary transition-all duration-300",
+    featured ? "lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-0" : ""
+  ]}
+  data-category={category.join(" ")}
+  data-aos="fade-up"
+  data-aos-delay={delay}
+>
+  <!-- Image -->
+  <div class="relative overflow-hidden h-52 lg:h-auto">
+    {featured && (
+      <span class="absolute top-3 left-3 z-10 bg-rose-highlight text-white text-xs px-3 py-1 rounded-full font-semibold">
+        🏆 Featured
+      </span>
+    )}
+    <img
+      src={image}
+      alt={imageAlt}
+      class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+  <!-- Content -->
+  <div class="p-6 flex flex-col gap-4">
+    <h3 class="text-lg font-bold text-rose-fg flex items-start gap-2">
+      <i class={`${icon} text-rose-primary mt-0.5 flex-shrink-0`}></i>
+      <span>{title}</span>
+    </h3>
+
+    {description.map(para => (
+      <p class="text-rose-muted text-sm leading-relaxed" set:html={para} />
+    ))}
+
+    {(finalScore || rank) && (
+      <div class="text-sm text-rose-muted bg-rose-bg1 border border-rose-bg3 rounded-lg px-4 py-2 inline-flex flex-wrap gap-4">
+        {finalScore && (
+          <span>Final score: <strong class="text-rose-primary">{finalScore}</strong></span>
+        )}
+        {rank && (
+          <span>Rank: <strong class="text-rose-secondary">{rank}</strong></span>
+        )}
+      </div>
+    )}
+
+    <div class="flex flex-wrap gap-2">
+      {techStack.map(tag => (
+        <span class="bg-rose-bg3/60 text-rose-highlight text-xs px-2.5 py-1 rounded-full font-medium">{tag}</span>
+      ))}
+    </div>
+
+    <div class="flex flex-wrap gap-3 mt-auto pt-2">
+      {links.map(link => (
+        link.url ? (
+          <a
+            href={link.url}
+            target="_blank"
+            class:list={[
+              "inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
+              link.style === 'primary'
+                ? "bg-rose-primary text-white hover:bg-rose-highlight hover:-translate-y-0.5 hover:shadow-md"
+                : "border border-rose-primary text-rose-primary hover:bg-rose-primary hover:text-white hover:-translate-y-0.5"
+            ]}
+          >
+            <i class={link.icon}></i> {link.label}
+          </a>
+        ) : (
+          <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-rose-bg3 text-rose-muted cursor-default opacity-75">
+            <i class={link.icon}></i> {link.label}
+          </span>
+        )
+      ))}
+    </div>
+  </div>
+</article>

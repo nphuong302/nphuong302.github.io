@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Nemotron Reasoning Challenge — solver-distilled curriculum feeding a LoRA adapter">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBEFEF"/>
+      <stop offset="100%" stop-color="#F9DFDF"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FCF8F8"/>
+    </linearGradient>
+    <linearGradient id="adapter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F5AFAF"/>
+      <stop offset="100%" stop-color="#D88080"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <!-- Subtle grid texture -->
+  <g stroke="#F5AFAF" stroke-width="0.5" opacity="0.18">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="900" y1="0" x2="900" y2="600"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="70" text-anchor="middle" font-family="ui-sans-serif, system-ui, Segoe UI, Roboto" font-size="22" font-weight="600" fill="#B85C5C" letter-spacing="3">
+    SOLVER-DISTILLED CURRICULUM   →   LoRA ADAPTER
+  </text>
+
+  <!-- LEFT: 5 problem-type cards (teacher data) -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#6B6B6B">
+    <!-- cipher -->
+    <g transform="translate(60, 140)">
+      <rect width="220" height="56" rx="8" fill="url(#card)" stroke="#F5AFAF" stroke-width="1.5"/>
+      <circle cx="20" cy="28" r="6" fill="#D88080"/>
+      <text x="38" y="33" fill="#2E2E2E" font-weight="600">cipher</text>
+      <text x="200" y="33" text-anchor="end">5,420</text>
+    </g>
+    <!-- bit -->
+    <g transform="translate(60, 210)">
+      <rect width="220" height="56" rx="8" fill="url(#card)" stroke="#F5AFAF" stroke-width="1.5"/>
+      <circle cx="20" cy="28" r="6" fill="#D88080"/>
+      <text x="38" y="33" fill="#2E2E2E" font-weight="600">bit</text>
+      <text x="200" y="33" text-anchor="end">3,992</text>
+    </g>
+    <!-- unit -->
+    <g transform="translate(60, 280)">
+      <rect width="220" height="56" rx="8" fill="url(#card)" stroke="#F5AFAF" stroke-width="1.5"/>
+      <circle cx="20" cy="28" r="6" fill="#D88080"/>
+      <text x="38" y="33" fill="#2E2E2E" font-weight="600">unit</text>
+      <text x="200" y="33" text-anchor="end">3,984</text>
+    </g>
+    <!-- gravity (highlighted) -->
+    <g transform="translate(60, 350)">
+      <rect width="220" height="56" rx="8" fill="#F9DFDF" stroke="#B85C5C" stroke-width="2"/>
+      <circle cx="20" cy="28" r="6" fill="#A04444"/>
+      <text x="38" y="33" fill="#2E2E2E" font-weight="700">gravity ★</text>
+      <text x="200" y="33" text-anchor="end" fill="#B85C5C">3,963</text>
+    </g>
+    <!-- numeral -->
+    <g transform="translate(60, 420)">
+      <rect width="220" height="56" rx="8" fill="url(#card)" stroke="#F5AFAF" stroke-width="1.5"/>
+      <circle cx="20" cy="28" r="6" fill="#D88080"/>
+      <text x="38" y="33" fill="#2E2E2E" font-weight="600">numeral</text>
+      <text x="200" y="33" text-anchor="end">3,952</text>
+    </g>
+    <!-- label -->
+    <text x="170" y="115" text-anchor="middle" fill="#B85C5C" font-family="ui-sans-serif, system-ui" font-size="13" font-weight="600" letter-spacing="2">21,311 VERIFIED EXAMPLES</text>
+  </g>
+
+  <!-- Connecting arrows from cards → middle -->
+  <g stroke="#D88080" stroke-width="1.8" fill="none" opacity="0.65">
+    <path d="M 290 168 Q 420 168, 540 295" stroke-dasharray="4 4"/>
+    <path d="M 290 238 Q 420 238, 540 300" stroke-dasharray="4 4"/>
+    <path d="M 290 308 L 540 305" stroke-dasharray="4 4"/>
+    <path d="M 290 378 Q 420 378, 540 310" stroke-dasharray="4 4"/>
+    <path d="M 290 448 Q 420 448, 540 315" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- CENTER: model + LoRA badge -->
+  <g transform="translate(540, 220)">
+    <!-- model base -->
+    <rect x="0" y="0" width="220" height="180" rx="14" fill="url(#card)" stroke="#F5AFAF" stroke-width="2"/>
+    <text x="110" y="40" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="13" font-weight="600" fill="#6B6B6B" letter-spacing="2">BASE MODEL</text>
+    <text x="110" y="78" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="700" fill="#2E2E2E">Nemotron-3-Nano</text>
+    <text x="110" y="108" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#B85C5C">30B params</text>
+
+    <!-- LoRA badge -->
+    <g transform="translate(35, 130)">
+      <rect width="150" height="34" rx="17" fill="url(#adapter)"/>
+      <text x="75" y="22" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="2">LoRA · r=32</text>
+    </g>
+  </g>
+
+  <!-- Arrow center → right -->
+  <g stroke="#B85C5C" stroke-width="2.5" fill="none">
+    <path d="M 770 310 L 880 310" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B85C5C"/>
+    </marker>
+  </defs>
+
+  <!-- RIGHT: inference output \boxed{} -->
+  <g transform="translate(900, 220)">
+    <rect width="240" height="180" rx="14" fill="url(#card)" stroke="#F5AFAF" stroke-width="2"/>
+    <text x="120" y="40" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="13" font-weight="600" fill="#6B6B6B" letter-spacing="2">INFERENCE</text>
+
+    <!-- boxed output -->
+    <g transform="translate(40, 64)">
+      <rect width="160" height="56" rx="6" fill="none" stroke="#B85C5C" stroke-width="2.5"/>
+      <text x="80" y="38" text-anchor="middle" font-family="ui-monospace, monospace" font-size="22" font-weight="700" fill="#A04444">\boxed{42}</text>
+    </g>
+
+    <text x="120" y="148" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#6B6B6B">vLLM · greedy pass@1</text>
+  </g>
+
+  <!-- Bottom strip: metrics -->
+  <g transform="translate(60, 530)" font-family="ui-sans-serif, system-ui" font-size="13" fill="#6B6B6B">
+    <text x="0" y="0" font-weight="600" fill="#B85C5C" letter-spacing="1">LOCAL DEV EVAL</text>
+    <text x="0" y="22">Baseline 33.3%  →  SFT adapter 36.7%   (90 samples)</text>
+  </g>
+  <g transform="translate(1140, 530)" text-anchor="end" font-family="ui-sans-serif, system-ui" font-size="13" fill="#6B6B6B">
+    <text x="0" y="0" font-weight="600" fill="#B85C5C" letter-spacing="1">PIPELINE</text>
+    <text x="0" y="22">PyTorch · PEFT · TRL · vLLM · HuggingFace</text>
+  </g>
+</svg>

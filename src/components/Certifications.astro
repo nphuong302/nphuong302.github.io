@@ -1,0 +1,32 @@
+---
+import certs from '../data/certifications.json';
+---
+
+<section id="certifications" class="py-24 bg-rose-bg0">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-16" data-aos="fade-down">
+      <h2 class="text-4xl font-bold text-rose-fg mb-3">Certifications</h2>
+      <p class="text-rose-muted text-lg">Verified credentials in ML, AI, data, and language</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {certs.map((cert, i) => (
+        <div
+          class="flex items-center gap-4 bg-rose-bg2 border border-rose-bg3 rounded-xl p-5 hover:-translate-y-1 hover:shadow-md hover:border-rose-primary transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay={i * 80}
+        >
+          <div class="w-11 h-11 rounded-full bg-rose-bg1 border border-rose-bg3 flex items-center justify-center text-rose-primary flex-shrink-0">
+            <i class={cert.icon}></i>
+          </div>
+          <div>
+            <div class="font-semibold text-rose-fg text-sm leading-tight">{cert.name}</div>
+            <div class="text-rose-muted text-xs mt-0.5">{cert.issuer}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

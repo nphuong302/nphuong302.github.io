@@ -1,0 +1,161 @@
+[
+  {
+    "id": "nemotron",
+    "title": "NVIDIA Nemotron Reasoning Challenge",
+    "icon": "fas fa-microchip",
+    "featured": true,
+    "category": ["ml", "python", "ai"],
+    "shortDesc": "Kaggle competition on few-shot rule induction. Built a solver-distilled curriculum of 21,311 verified examples to fine-tune Nemotron-3-Nano with LoRA.",
+    "description": [
+      "Kaggle competition on few-shot rule induction across 6 reasoning problem types (bit manipulation, physics gravity, unit conversion, numeral systems, symbol transform, encryption ciphers). Approach: a solver-distilled curriculum of verified teacher examples used to fine-tune NVIDIA's Nemotron-3-Nano with LoRA. The physics-gravity generator was not observed in the public competitor notebooks reviewed.",
+      "Built deterministic per-type solvers and generated 21,311 curated training records across 5 of the 6 problem types. Round-trip re-verification caught errors in the synthetic generators. A rank-32 LoRA training pipeline was implemented for the 30B model, targeting Kaggle's vLLM inference backend."
+    ],
+    "techStack": ["Python", "PyTorch", "PEFT", "TRL", "vLLM", "HuggingFace", "LoRA"],
+    "image": "/images/nemotron.png",
+    "imageAlt": "NVIDIA Nemotron Reasoning Challenge — solver-distilled curriculum feeding a LoRA adapter",
+    "finalScore": "0.588",
+    "rank": "3571 / 4182",
+    "links": [
+      { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/nemotron-challenge", "style": "primary" },
+      { "label": "Competition", "icon": "fab fa-kaggle", "url": "https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge", "style": "secondary" }
+    ]
+  },
+  {
+    "id": "cloud-intel-agent",
+    "title": "Cloud Market Intelligence Agent",
+    "icon": "fas fa-cloud",
+    "featured": false,
+    "category": ["ai", "python", "ml"],
+    "shortDesc": "Freelance project. B2B AI agent generating scheduled competitive-intelligence digests via Claude API, with Telegram delivery and GitHub audit trail.",
+    "description": [
+      "Freelance project. AI agent for B2B competitive intelligence in the cloud-services market: generates scheduled weekly digests and monthly strategic summaries from competitor pricing, news feeds, and market signals, with Telegram delivery and a GitHub audit trail.",
+      "Pipeline: Scheduler (cron, ICT-aware) → Workspace Loader → Claude API (analysis) → Quality Gates (TL;DR check · length bounds · source citations) → Telegram (delivery) + GitHub commit (audit trail).",
+      "Architecture: 3-layer design — Claude API analysis logic / Python agent runtime (scheduler + bot + HTTP server with daemon-thread pattern) / Docker-based deployment targeting managed-agent platforms. Reproducible Docker builds with lock-file CI."
+    ],
+    "techStack": ["Python", "Claude API", "Docker", "FastAPI", "Telegram Bot", "GitHub Actions"],
+    "image": "/images/cloud-agent.svg",
+    "imageAlt": "Cloud Market Intelligence Agent — scheduled pipeline from cron to Telegram delivery",
+    "links": [
+      { "label": "Freelance — repository private", "icon": "fas fa-lock", "url": null, "style": "muted" }
+    ]
+  },
+  {
+    "id": "rag-hr",
+    "title": "CV RAG System – HR Assistant",
+    "icon": "fas fa-robot",
+    "featured": false,
+    "category": ["ml", "python", "ai"],
+    "shortDesc": "Learning-focused RAG pipeline for CV / PDF understanding and Q&A: parsing, embeddings, vector storage, and natural-language querying.",
+    "description": [
+      "Learning-focused project exploring Retrieval-Augmented Generation (RAG) for document understanding and question answering. Built an end-to-end pipeline for PDF parsing, embeddings, vector storage, and natural language querying."
+    ],
+    "techStack": ["Python", "LangChain", "ChromaDB", "Streamlit", "LLM"],
+    "image": "/images/rag2.png",
+    "imageAlt": "RAG HR Assistant",
+    "links": [
+      { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/rag-chatbot", "style": "primary" }
+    ]
+  },
+  {
+    "id": "thesis-fruit",
+    "title": "Fruit Classification (Thesis)",
+    "icon": "fas fa-seedling",
+    "featured": false,
+    "category": ["ml", "python", "cv"],
+    "shortDesc": "YOLOv4-based computer vision pipeline to classify fruits by ripeness using color analysis. Final year thesis (2020).",
+    "description": [
+      "Final year thesis (2020): built a YOLOv4-based computer vision pipeline to classify fruits by ripeness (green vs. ripe) using color analysis. Designed for agricultural sorting simulation. Implemented with Python, OpenCV, and deep learning training from scratch on a custom dataset."
+    ],
+    "techStack": ["Python", "YOLOv4", "OpenCV", "Deep Learning", "Computer Vision"],
+    "image": "/images/img_03.jpg",
+    "imageAlt": "Fruit ripeness classification stages: Unripe, Breaker, Turning, Ripe",
+    "links": [
+      { "label": "Thesis Project — repository not yet public", "icon": "fas fa-graduation-cap", "url": null, "style": "muted" }
+    ]
+  },
+  {
+    "id": "football",
+    "title": "Football Data Analysis & Prediction",
+    "icon": "fas fa-football-ball",
+    "featured": false,
+    "category": ["ml", "python", "data"],
+    "shortDesc": "Sports data analysis using historical football match data (2018–2022). Feature engineering and exploratory statistical analysis.",
+    "description": [
+      "Sports data analysis project using historical football match data (2018–2022). Focused on feature engineering and exploratory statistical analysis to understand predictive patterns."
+    ],
+    "techStack": ["Python", "Pandas", "NumPy"],
+    "image": "/images/img_01.jpg",
+    "imageAlt": "Football Prediction",
+    "links": [
+      { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/Football_prediction", "style": "primary" }
+    ]
+  },
+  {
+    "id": "rag-teaching",
+    "title": "AI Teaching Assistant",
+    "icon": "fas fa-graduation-cap",
+    "featured": false,
+    "category": ["ml", "python", "ai"],
+    "shortDesc": "Learning project combining RAG with LLMs for educational Q&A using Google Gemini API and grounding techniques.",
+    "description": [
+      "Learning project combining RAG with Large Language Models for educational question answering using Google Gemini API and grounding techniques."
+    ],
+    "techStack": ["Python", "RAG", "LLMs"],
+    "image": "/images/ai.png",
+    "imageAlt": "AI Teaching Assistant",
+    "links": [
+      { "label": "View on Kaggle", "icon": "fab fa-kaggle", "url": "https://www.kaggle.com/code/nphuong302/teaching-assistant", "style": "primary" }
+    ]
+  },
+  {
+    "id": "covid",
+    "title": "COVID-19 Global Data Analysis",
+    "icon": "fas fa-virus",
+    "featured": false,
+    "category": ["data", "sql", "python"],
+    "shortDesc": "SQL-based exploration of global COVID-19 datasets with Tableau visualizations of cases, deaths, and vaccinations.",
+    "description": [
+      "SQL-based exploration of global COVID-19 datasets, focusing on trends in cases, deaths, and vaccinations with Tableau visualizations."
+    ],
+    "techStack": ["SQL", "Tableau", "Data Visualization"],
+    "image": "/images/img_02.jpg",
+    "imageAlt": "COVID Analysis",
+    "links": [
+      { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/DataAnalystPortfolioProject", "style": "primary" }
+    ]
+  },
+  {
+    "id": "tictactoe",
+    "title": "Tic Tac Toe AI (Minimax)",
+    "icon": "fas fa-gamepad",
+    "featured": false,
+    "category": ["ml", "python"],
+    "shortDesc": "Classic game AI implementing Minimax with Alpha-Beta pruning to explore decision trees and adversarial search.",
+    "description": [
+      "Classic game AI implementing the Minimax algorithm with Alpha-Beta pruning to explore decision trees and adversarial search."
+    ],
+    "techStack": ["Python", "Minimax", "Game Theory"],
+    "image": "/images/img_08.jpg",
+    "imageAlt": "Tic Tac Toe AI",
+    "links": [
+      { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/tic-tac-toe", "style": "primary" }
+    ]
+  },
+  {
+    "id": "oop-cards",
+    "title": "Python OOP – Card Game",
+    "icon": "fas fa-layer-group",
+    "featured": false,
+    "category": ["python"],
+    "shortDesc": "OOP practice implementing a classic card game (\"War\"). Focused on clean class design, inheritance, and encapsulation.",
+    "description": [
+      "Object-Oriented Programming practice project implementing a classic card game (\"War\"). Focused on clean class design, inheritance, encapsulation, and game state management."
+    ],
+    "techStack": ["Python", "OOP", "Design Patterns"],
+    "image": "/images/img_05.jpg",
+    "imageAlt": "Python OOP Card Game",
+    "links": [
+      { "label": "View Code", "icon": "fab fa-github", "url": "https://github.com/nphuong302/PythonOOP_CardsGame", "style": "primary" }
+    ]
+  }
+]

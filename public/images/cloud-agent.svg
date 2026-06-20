@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Cloud Market Intelligence Agent — scheduled pipeline from cron to Telegram delivery">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBEFEF"/>
+      <stop offset="100%" stop-color="#F9DFDF"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FCF8F8"/>
+    </linearGradient>
+    <linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F5AFAF"/>
+      <stop offset="100%" stop-color="#D88080"/>
+    </linearGradient>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B85C5C"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg2)"/>
+
+  <!-- Faint grid -->
+  <g stroke="#F5AFAF" stroke-width="0.5" opacity="0.18">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="60" text-anchor="middle" font-family="ui-sans-serif, system-ui, Segoe UI, Roboto" font-size="22" font-weight="600" fill="#B85C5C" letter-spacing="3">
+    SCHEDULED COMPETITIVE-INTELLIGENCE PIPELINE
+  </text>
+
+  <!-- ========= Pipeline nodes ========= -->
+
+  <!-- Node 1: Scheduler -->
+  <g transform="translate(60, 230)">
+    <rect width="180" height="140" rx="12" fill="url(#node)" stroke="#F5AFAF" stroke-width="2"/>
+    <!-- Clock icon -->
+    <g transform="translate(90, 50)">
+      <circle r="26" fill="none" stroke="#B85C5C" stroke-width="2.5"/>
+      <line x1="0" y1="0" x2="0" y2="-16" stroke="#B85C5C" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="12" y2="6" stroke="#B85C5C" stroke-width="2.5" stroke-linecap="round"/>
+      <circle r="2" fill="#A04444"/>
+    </g>
+    <text x="90" y="105" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="14" font-weight="700" fill="#2E2E2E">Scheduler</text>
+    <text x="90" y="125" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#6B6B6B">0 9 * * 5 · ICT</text>
+  </g>
+
+  <!-- Node 2: Workspace + Sources -->
+  <g transform="translate(290, 230)">
+    <rect width="180" height="140" rx="12" fill="url(#node)" stroke="#F5AFAF" stroke-width="2"/>
+    <!-- Stacked docs icon -->
+    <g transform="translate(90, 50)" stroke="#B85C5C" stroke-width="2.2" fill="none">
+      <rect x="-22" y="-20" width="34" height="44" rx="3"/>
+      <rect x="-16" y="-14" width="34" height="44" rx="3" fill="#FBEFEF"/>
+      <line x1="-9" y1="-3" x2="11" y2="-3"/>
+      <line x1="-9" y1="6" x2="11" y2="6"/>
+      <line x1="-9" y1="15" x2="5" y2="15"/>
+    </g>
+    <text x="90" y="105" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="14" font-weight="700" fill="#2E2E2E">Workspace</text>
+    <text x="90" y="125" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#6B6B6B">memory · prompts</text>
+  </g>
+
+  <!-- Node 3: Claude API -->
+  <g transform="translate(520, 230)">
+    <rect width="180" height="140" rx="12" fill="url(#node)" stroke="#B85C5C" stroke-width="2.5"/>
+    <!-- Brain/spark icon -->
+    <g transform="translate(90, 50)" stroke="#A04444" stroke-width="2.2" fill="none">
+      <path d="M -22 0 Q -22 -22, 0 -22 Q 22 -22, 22 0 Q 22 22, 0 22 Q -22 22, -22 0 Z"/>
+      <path d="M -10 -8 L 0 0 L -10 8 M 10 -8 L 0 0 L 10 8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="90" y="105" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="14" font-weight="700" fill="#2E2E2E">Claude API</text>
+    <text x="90" y="125" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#6B6B6B">analysis · synthesis</text>
+  </g>
+
+  <!-- Node 4: Quality Gates -->
+  <g transform="translate(750, 230)">
+    <rect width="180" height="140" rx="12" fill="url(#node)" stroke="#F5AFAF" stroke-width="2"/>
+    <!-- Shield / check icon -->
+    <g transform="translate(90, 50)" stroke="#B85C5C" stroke-width="2.2" fill="none">
+      <path d="M 0 -24 L 22 -16 L 22 4 Q 22 18, 0 26 Q -22 18, -22 4 L -22 -16 Z"/>
+      <path d="M -10 0 L -2 8 L 12 -8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"/>
+    </g>
+    <text x="90" y="105" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="14" font-weight="700" fill="#2E2E2E">Quality Gates</text>
+    <text x="90" y="125" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#6B6B6B">TL;DR · length · cites</text>
+  </g>
+
+  <!-- Node 5: Telegram delivery (top right branch) -->
+  <g transform="translate(980, 150)">
+    <rect width="180" height="120" rx="12" fill="url(#node)" stroke="#F5AFAF" stroke-width="2"/>
+    <!-- Paper plane icon -->
+    <g transform="translate(90, 42)" stroke="#B85C5C" stroke-width="2.2" fill="none" stroke-linejoin="round">
+      <path d="M -22 -4 L 22 -18 L 8 22 L 0 6 Z"/>
+      <line x1="0" y1="6" x2="22" y2="-18"/>
+    </g>
+    <text x="90" y="92" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="13" font-weight="700" fill="#2E2E2E">Telegram</text>
+    <text x="90" y="108" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#6B6B6B">delivery</text>
+  </g>
+
+  <!-- Node 6: GitHub audit (bottom right branch) -->
+  <g transform="translate(980, 330)">
+    <rect width="180" height="120" rx="12" fill="url(#node)" stroke="#F5AFAF" stroke-width="2"/>
+    <!-- Branch / commit icon -->
+    <g transform="translate(90, 42)" stroke="#B85C5C" stroke-width="2.2" fill="none">
+      <circle cx="-16" cy="-8" r="5"/>
+      <circle cx="16" cy="-8" r="5"/>
+      <circle cx="0" cy="14" r="5"/>
+      <line x1="-12" y1="-8" x2="12" y2="-8"/>
+      <line x1="0" y1="-3" x2="0" y2="9"/>
+    </g>
+    <text x="90" y="92" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="13" font-weight="700" fill="#2E2E2E">GitHub</text>
+    <text x="90" y="108" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#6B6B6B">audit trail</text>
+  </g>
+
+  <!-- ========= Arrows between nodes ========= -->
+  <g stroke="#B85C5C" stroke-width="2.2" fill="none">
+    <!-- 1 → 2 -->
+    <line x1="240" y1="300" x2="284" y2="300" marker-end="url(#arrow2)"/>
+    <!-- 2 → 3 -->
+    <line x1="470" y1="300" x2="514" y2="300" marker-end="url(#arrow2)"/>
+    <!-- 3 → 4 -->
+    <line x1="700" y1="300" x2="744" y2="300" marker-end="url(#arrow2)"/>
+    <!-- 4 → 5 (top branch) -->
+    <path d="M 930 280 Q 970 280, 974 210" marker-end="url(#arrow2)"/>
+    <!-- 4 → 6 (bottom branch) -->
+    <path d="M 930 320 Q 970 320, 974 390" marker-end="url(#arrow2)"/>
+  </g>
+
+  <!-- Accent bar at top -->
+  <rect x="60" y="105" width="1080" height="3" rx="1.5" fill="url(#accentBar)" opacity="0.55"/>
+
+  <!-- Bottom strip: stack -->
+  <g transform="translate(60, 530)" font-family="ui-sans-serif, system-ui" font-size="13" fill="#6B6B6B">
+    <text x="0" y="0" font-weight="600" fill="#B85C5C" letter-spacing="1">CADENCE</text>
+    <text x="0" y="22">Weekly digest · Monthly strategic summary  (timezone-aware ICT)</text>
+  </g>
+  <g transform="translate(1140, 530)" text-anchor="end" font-family="ui-sans-serif, system-ui" font-size="13" fill="#6B6B6B">
+    <text x="0" y="0" font-weight="600" fill="#B85C5C" letter-spacing="1">STACK</text>
+    <text x="0" y="22">Python · Claude API · FastAPI · Docker · GitHub Actions</text>
+  </g>
+</svg>

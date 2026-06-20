@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "fas fa-code",
+    "title": "Programming Languages",
+    "tags": ["Python", "SQL", "C++"]
+  },
+  {
+    "icon": "fas fa-brain",
+    "title": "ML / Deep Learning",
+    "tags": ["PyTorch", "Model Development", "OpenCV", "Computer Vision"]
+  },
+  {
+    "icon": "fas fa-robot",
+    "title": "LLM & AI Systems",
+    "tags": ["PEFT / LoRA", "TRL", "vLLM", "Claude API", "RAG", "LangChain"]
+  },
+  {
+    "icon": "fas fa-cloud",
+    "title": "Cloud & Deployment",
+    "tags": ["Docker", "AWS", "GitHub Actions"]
+  }
+]
